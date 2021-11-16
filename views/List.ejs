@@ -1,0 +1,24 @@
+<%- include("header") -%>
+
+  <div id="heading" class="box">
+      <h2>Chat With People Live!</h2>
+      <h4>Any Offense Content will Result in an Erase of Current Content.</h4>
+    <h1><%= ListTitle %></h1>
+
+  </div>
+  <div class="box">
+    <%for (var i=0; i<newListItems.length; i++){ %>
+    <div class="item">
+      <input type="checkbox">
+      <p><%= newListItems[i]%></p>
+
+    </div>
+    <%  }%>
+
+    <form class="item" action="/" method="post">
+      <input type="text" name="newItem" placeholder="What's On Your Mind?" autocomplete="off" required>
+      <button type="submit" name="List" value=<%= ListTitle %>> +</button>
+
+    </form>
+  </div>
+<%- include("footer") -%>
