@@ -1,6 +1,6 @@
 //jshint eversion:6
 
-module.exports = getDate;
+module.exports.getDate = getDate;
 
 function getDate(){
 let today = new Date();
